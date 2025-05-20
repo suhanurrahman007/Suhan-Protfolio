@@ -5,10 +5,12 @@ import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import Image from "next/image";
+
 import { BackgroundLines } from "../../AceternityUI/banner/background-lines";
 import ContainerCU from "../Container";
-import logo from "@/src/assets/suhan-removebg-preview.png";
 import { BackgroundBeamsWithCollision } from "../../AceternityUI/banner/background-beams-with-collision";
+
+import logo from "@/src/assets/suhan-removebg-preview.png";
 
 export function Banner() {
   return (
@@ -47,26 +49,26 @@ export function Banner() {
               {/* Social Icons */}
               <div className="flex justify-center md:justify-start gap-4 pt-4">
                 <Link
-                  href="https://linkedin.com"
-                  target="_blank"
                   aria-label="LinkedIn"
                   className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-purple-500 transition"
+                  href="https://linkedin.com"
+                  target="_blank"
                 >
                   <FaLinkedin size={20} />
                 </Link>
                 <Link
-                  href="https://github.com"
-                  target="_blank"
                   aria-label="GitHub"
                   className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-purple-500 transition"
+                  href="https://github.com"
+                  target="_blank"
                 >
                   <FaGithub size={20} />
                 </Link>
                 <Link
-                  href="https://facebook.com"
-                  target="_blank"
                   aria-label="Facebook"
                   className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-purple-500 transition"
+                  href="https://facebook.com"
+                  target="_blank"
                 >
                   <FaFacebook size={20} />
                 </Link>
