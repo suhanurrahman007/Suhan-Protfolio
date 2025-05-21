@@ -42,8 +42,10 @@ export function Banner() {
               />
 
               <p className="text-base sm:text-md text-gray-600 dark:text-gray-300">
-                A Full Stack Web Developer passionate about building
-                professional and interactive websites.
+                I am Suhanur Rahman. I am a front-end web developer. I have been
+                Study in this sector for the past 1+ years. I consider coding as
+                the most important thing in my life. I love to tackle complex
+                problems.
               </p>
 
               {/* Social Icons */}
