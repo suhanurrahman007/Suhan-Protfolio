@@ -8,7 +8,7 @@ export function TimelineDemo() {
       title: "2024",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-8 text-xs font-normal  text-neutral-800 md:text-sm dark:text-neutral-200">
             Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -93,7 +93,7 @@ export function TimelineDemo() {
       title: "Changelog",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-xs font-normal  md:text-sm">
             Deployed 5 new components on Aceternity today
           </p>
           <div className="mb-8">

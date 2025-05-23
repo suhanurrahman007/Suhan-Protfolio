@@ -16,6 +16,7 @@ import { MdMarkEmailRead } from "react-icons/md";
 import Link from "next/link";
 
 import { BackgroundBeamsWithCollision } from "../../AceternityUI/banner/background-beams-with-collision";
+import { Button } from "@heroui/button";
 
 const ContactUs = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -83,11 +84,16 @@ const ContactUs = () => {
                   placeholder="Your Message"
                 />
 
-                <input
-                  className="w-full border border-purple-700 hover:bg-purple-800 text-black dark:text-white font-semibold py-3 px-6 rounded transition-colors duration-300 cursor-pointer"
+                <Button
+                  className="relative rounded-xs inline-block h-11 w-full overflow-hidden bg-white dark:bg-black border border-purple-500 dark:text-purple-200 text-purple-700 shadow-lg 
+                      before:absolute before:inset-0 before:-z-10 before:block before:translate-x-[90%] before:rounded-s-full before:bg-purple-700 before:duration-200 
+                      after:absolute after:inset-0 after:-z-10 after:block after:-translate-x-[90%] after:rounded-e-full after:bg-purple-700 after:duration-500 
+                      hover:text-white before:hover:translate-x-0 after:hover:translate-x-0"
                   type="submit"
-                  value="Submit Message"
-                />
+                  // value="Submit Message"
+                >
+                  Submit Message
+                </Button>
               </form>
             </div>
 
@@ -97,8 +103,7 @@ const ContactUs = () => {
                 Contact Info
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                Dhaka, Savar, Savar Khagan Bazar, Daffodil International
-                University
+                Ka-30, Joar Shahara, Kuril, Vatara, Dhaka-1229
               </p>
 
               <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">

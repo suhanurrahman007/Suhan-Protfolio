@@ -11,24 +11,23 @@ import Learning from "./learning";
 import { SkillCard } from "./SkillCard";
 
 const baseTabStyle =
-  "font-bold py-2 px-4 rounded border border-purple-700 transition duration-300 dark:text-white text-black hover:bg-purple-700";
+  "font-bold py-2 px-4 rounded border border-purple-700 transition duration-300 text-sm sm:text-base dark:text-white text-black hover:bg-purple-700";
 const selectedTabStyle = "bg-purple-700 text-white";
 
 const Skill = () => {
   return (
     <BackgroundBeamsWithCollision>
       <ContainerCU>
-        <div className="flex flex-col lg:flex-row gap-20 pb-12">
-          {/* Left Side Tabs */}
-
-          <div className="w-full lg:w-1/3 flex justify-center items-center">
+        <div className="flex flex-col lg:mt-10 lg:flex-row gap-10 md:gap-16 lg:gap-14 pb-12">
+          {/* SkillCard Section */}
+          <div className="w-full lg:w-1/3 flex justify-center lg:justify-start items-center">
             <SkillCard />
           </div>
-          {/* Right Side Placeholder */}
 
+          {/* Tabbed Content Section */}
           <div className="w-full lg:w-2/3">
             <Tabs>
-              <TabList className="flex gap-2 md:gap-5 mb-8 flex-wrap">
+              <TabList className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-4 mb-8">
                 <Tab
                   className={baseTabStyle}
                   selectedClassName={selectedTabStyle}

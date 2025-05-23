@@ -6,9 +6,12 @@ import { BackgroundBeamsWithCollision } from "../../AceternityUI/banner/backgrou
 
 export function ProjectBanner() {
   return (
-    <BackgroundBeamsWithCollision>
-      <HeroParallax products={products} />
-    </BackgroundBeamsWithCollision>
+    <div className="hidden lg:block">
+      {/* 👈 Only show on large screens and up */}
+      <BackgroundBeamsWithCollision>
+        <HeroParallax products={products} />
+      </BackgroundBeamsWithCollision>
+    </div>
   );
 }
 export const products = [
