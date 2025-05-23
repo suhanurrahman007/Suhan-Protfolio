@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,19 +11,26 @@ import ContainerCU from "../Container";
 import { BackgroundBeamsWithCollision } from "../../AceternityUI/banner/background-beams-with-collision";
 
 import logo from "@/src/assets/suhan-removebg-preview.png";
+import { TextGenerateEffect } from "../../AceternityUI/banner/text-generate-effect";
+import { Button } from "@heroui/button";
 
 export function Banner() {
+  const words = `I am Suhanur Rahman. I am a front-end web developer. I have been
+                studying in this sector for the past 1+ years. I consider coding
+                the most important thing in my life. I love to tackle complex
+                problems.`;
+
   return (
     <BackgroundLines>
       <ContainerCU>
-        <div className="flex flex-col md:flex-row justify-between items-center text-black dark:text-white py-2">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-y-10 md:gap-y-0 text-black dark:text-white py-6">
           {/* Left Section */}
           <BackgroundBeamsWithCollision>
             <div className="max-w-xl space-y-6 text-center md:text-left">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white">
                 Hello, I&#39;m{" "}
                 <span className="text-purple-700 dark:text-purple-400">
-                  Al Amin
+                  Suhanur Rahman
                 </span>
               </h1>
 
@@ -31,7 +38,7 @@ export function Banner() {
                 className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400"
                 repeat={Infinity}
                 sequence={[
-                  "UI/UX Designer",
+                  "BackEnd Developer",
                   2000,
                   "MERN Stack Developer",
                   2000,
@@ -41,73 +48,91 @@ export function Banner() {
                 wrapper="h2"
               />
 
-              <p className="text-base sm:text-md text-gray-600 dark:text-gray-300">
-                I am Suhanur Rahman. I am a front-end web developer. I have been
-                Study in this sector for the past 1+ years. I consider coding as
-                the most important thing in my life. I love to tackle complex
-                problems.
-              </p>
+              <TextGenerateEffect words={words} />
 
               {/* Social Icons */}
               <div className="flex justify-center md:justify-start gap-4 pt-4">
                 <Link
                   aria-label="LinkedIn"
-                  className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-purple-500 transition"
                   href="https://linkedin.com"
                   target="_blank"
+                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-blue-700 dark:text-white hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-all duration-300 shadow-md hover:scale-105"
                 >
-                  <FaLinkedin size={20} />
+                  <FaLinkedin className="text-pink-600" size={20} />
                 </Link>
                 <Link
                   aria-label="GitHub"
-                  className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-purple-500 transition"
                   href="https://github.com"
                   target="_blank"
+                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-all duration-300 shadow-md hover:scale-105"
                 >
                   <FaGithub size={20} />
                 </Link>
                 <Link
                   aria-label="Facebook"
-                  className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-purple-500 transition"
                   href="https://facebook.com"
                   target="_blank"
+                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-blue-600 dark:text-white hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 transition-all duration-300 shadow-md hover:scale-105"
                 >
-                  <FaFacebook size={20} />
+                  <FaFacebook className="text-blue-600" size={20} />
                 </Link>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex justify-center md:justify-start gap-6 pt-6">
-                <Link href="/resume.pdf" target="_blank">
-                  <button className="bg-purple-600 dark:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 dark:hover:bg-purple-600 transition">
-                    Resume ⬇
-                  </button>
+              <div className="flex  justify-center md:justify-start gap-5 pt-6">
+                <Link href="/resume.pdf" download className="group">
+                  <Button
+                    className="relative rounded-xs inline-block h-10 w-44 overflow-hidden bg-white dark:bg-black border border-purple-500 dark:text-purple-200 text-purple-700 shadow-lg 
+                      before:absolute before:inset-0 before:-z-10 before:block before:translate-x-[90%] before:rounded-s-full before:bg-purple-700 before:duration-200 
+                      after:absolute after:inset-0 after:-z-10 after:block after:-translate-x-[90%] after:rounded-e-full after:bg-purple-700 after:duration-500 
+                      hover:text-white before:hover:translate-x-0 after:hover:translate-x-0"
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      <FaDownload className="text-purple-400 group-hover:text-white transition-colors duration-300" />
+                      Resume
+                    </span>
+                  </Button>
                 </Link>
-                <Link href="#projects">
-                  <button className="border border-purple-500 text-purple-700 dark:text-purple-300 px-6 py-2 rounded-lg font-semibold hover:bg-purple-100 dark:hover:bg-purple-500 dark:hover:text-white transition">
-                    Projects ⌘
-                  </button>
+
+                <Link
+                  href="#"
+                  className="group relative flex h-10 w-44 items-center rounded-lg border-2 border-purple-600 p-4 dark:text-purple-200 text-purple-700 bg-white dark:bg-black"
+                >
+                  <span>Project</span>
+                  <span className="absolute right-3 box-content flex w-1/6 justify-center rounded-md bg-purple-600 duration-300 group-hover:w-5/6">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="w-10"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 12H20M20 12L14 6M20 12L14 18"
+                        stroke="#fff"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </Link>
               </div>
             </div>
           </BackgroundBeamsWithCollision>
 
           {/* Right Section - Image with Background Video */}
-          <div className="mt-12 md:mt-0 relative w-[500px] h-[400px]  lg:mr-16 rounded-xl overflow-hidden shadow-lg">
-            {/* Background Video */}
+          <div className="relative w-full max-w-[500px] h-[400px] rounded-xl overflow-hidden shadow-lg">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              className="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
               src="/bg.mp4"
             />
-
-            {/* Foreground Image */}
             <div className="relative z-10 w-full h-full flex items-center justify-center">
               <Image
-                alt="Al Amin"
+                alt="Suhanur Rahman"
                 className="rounded-xl hover:grayscale grayscale-0 transition duration-500"
                 height={400}
                 src={logo}

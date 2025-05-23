@@ -23,11 +23,11 @@ const About = () => {
     <div className=" relative">
       <BackgroundBeamsWithCollision>
         <ContainerCU>
-          <div className="flex flex-col lg:flex-row gap-14 items-center lg:items-start">
+          <div className="flex flex-col lg:flex-row mt-7 gap-14 items-center lg:items-start">
             {/* Tabs Section */}
-            <div className="w-full lg:w-2/3 bg-white dark:bg-black rounded-xl shadow-md">
+            <div className="w-full lg:w-2/3 bg-white p-2 dark:bg-black rounded-xl shadow-md">
               <Tabs>
-                <TabList className="flex flex-wrap gap-3 mb-6">
+                <TabList className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
                   <Tab
                     className={`${tabStyle} text-gray-900 dark:text-white border-purple-600 hover:bg-purple-100 dark:hover:bg-purple-600`}
                     selectedClassName="bg-purple-600 text-white"
@@ -72,7 +72,7 @@ const About = () => {
             {/* Image Section */}
             <Image
               alt="About Me"
-              className="w-full mr-12 max-w-[300px] md:max-w-[350px] lg:max-w-[400px] h-auto rounded-lg shadow-2xl"
+              className="w-full mr-12 lg:max-w-[400px] ml-16 lg:ml-0 h-auto rounded-lg"
               height={350}
               src={img}
               width={350}
